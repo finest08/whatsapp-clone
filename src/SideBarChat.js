@@ -9,6 +9,7 @@ const useStyles = makeStyles({
         overflow: 'scroll',
         display: 'flex',
         padding: '20px',
+        cursor: 'pointer',
         borderBottom: '1px solid #f6f6f6',
         '&:hover': {
             backgroundColor: "#ebebeb",
@@ -24,14 +25,7 @@ const useStyles = makeStyles({
     h2: {
         fontSize: '16px',
         marginBottom: '8px',
-
-
     },
-    p: {
-
-    },
-
-
 });
 
 function SideBarChat( { addNewChat }) {
