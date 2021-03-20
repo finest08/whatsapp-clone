@@ -8,9 +8,15 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 
 const useStyles = makeStyles({
     sidebar: {
+        flex: 0.35,
 
     },
     sidebar__header: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        padding: 20,
+        borderRight: '1px solid lightgray',
+
 
     },
     sidebar__search: {
@@ -36,8 +42,6 @@ function Sidebar() {
                     <DonutLargeIcon />
                     <ChatIcon />
                     <MoreVertIcon />
-
-
                 </div>
                 
             </div>

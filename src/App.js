@@ -32,7 +32,6 @@ function App() {
   return (
     // BEM naming convention
     <div className={classes.app}>
-      <h1>WhatsApp Clone!</h1>
       
       <div className={classes.app__body}>
         <Sidebar />
