@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Sidebar from './Sidebar';
+
+
+const useStyles = makeStyles({
+  app: {
+    display: 'grid',
+    placeItems: 'center',    
+    backgroundColor: '#dadbd3',
+    height: 1000,
+    
+
+  },
+  app__body: {
+    display: 'flex',
+    marginTop: -50,
+    backgroundColor: '#ededed',
+    height: 900,
+    width: 900,
+    boxShadow: '-1px 4px 20px -6px rgba(0, 0, 0, 0.2)'
+
+  },
+
+
+});
+
+// youtube video paused @ 32.08
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    // BEM naming convention
+    <div className={classes.app}>
+      <h1>WhatsApp Clone!</h1>
+      
+      <div className={classes.app__body}>
+        <Sidebar />
+        {/* Side bar */}
+
+        {/* Chat */}
+
+      </div>
     </div>
   );
 }
 
 export default App;
+
