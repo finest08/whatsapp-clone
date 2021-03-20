@@ -1,0 +1,73 @@
+import React, { useState, useEffect } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Avatar } from '@material-ui/core';
+
+
+const useStyles = makeStyles({
+    sidebarChat: {
+        backgroundColor: 'white',
+        overflow: 'scroll',
+        display: 'flex',
+        padding: '20px',
+        borderBottom: '1px solid #f6f6f6',
+        '&:hover': {
+            backgroundColor: "#ebebeb",
+         },
+        
+
+    },
+    
+    sidebarChat__info: {
+        marginLeft: '15px',
+
+    },
+    h2: {
+        fontSize: '16px',
+        marginBottom: '8px',
+
+
+    },
+    p: {
+
+    },
+
+
+});
+
+function SideBarChat( { addNewChat }) {
+    const classes = useStyles();
+    const [seed, setSeed] = useState("");
+    useEffect(() => {
+        setSeed(Math.floor(Math.random() * 5000))
+        
+    }, []);
+
+     const createChat = () => {
+         const roomName = prompt("Whats the room name bitch?");
+
+         if (roomName) {
+             // do some clever stuff...
+         }
+
+     };
+    
+    return !addNewChat ? (
+        <div className={classes.sidebarChat}>
+            <Avatar src={`https://avatars.dicebear.com/api/avataaars/${seed}.svg`}/>
+            <div className={classes.sidebarChat__info}>
+                <h2 className={classes.h2}>Room Name</h2>
+                <p className={classes.p}>last message ...</p>
+            </div>
+
+            
+        </div>
+    ) : (
+        <div onClick={createChat}
+        className={classes.sidebarChat}>
+            <h2>Add new chat</h2>
+
+        </div>
+    );
+}
+
+export default SideBarChat

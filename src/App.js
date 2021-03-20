@@ -10,7 +10,6 @@ const useStyles = makeStyles({
     backgroundColor: '#dadbd3',
     height: 1000,
     
-
   },
   app__body: {
     display: 'flex',
@@ -21,11 +20,9 @@ const useStyles = makeStyles({
     boxShadow: '-1px 4px 20px -6px rgba(0, 0, 0, 0.2)'
 
   },
-
-
 });
 
-// youtube video paused @ 32.08
+// youtube video paused @ 1.20
 
 function App() {
   const classes = useStyles();
