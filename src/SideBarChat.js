@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Avatar } from '@material-ui/core';
+import db from './firebase';
 
 
 const useStyles = makeStyles({
     sidebarChat: {
-        backgroundColor: 'white',
-        overflow: 'scroll',
         display: 'flex',
+        placeItems: 'center',
         padding: '20px',
         cursor: 'pointer',
         borderBottom: '1px solid #f6f6f6',
@@ -28,7 +28,7 @@ const useStyles = makeStyles({
     },
 });
 
-function SideBarChat( { addNewChat }) {
+function SideBarChat( { id, name, addNewChat }) {
     const classes = useStyles();
     const [seed, setSeed] = useState("");
     useEffect(() => {
@@ -41,16 +41,18 @@ function SideBarChat( { addNewChat }) {
 
          if (roomName) {
              // do some clever stuff...
-         }
-
+             db.collection("rooms").add({
+                name: roomName,
+            });
+        }
      };
     
     return !addNewChat ? (
         <div className={classes.sidebarChat}>
             <Avatar src={`https://avatars.dicebear.com/api/avataaars/${seed}.svg`}/>
             <div className={classes.sidebarChat__info}>
-                <h2 className={classes.h2}>Room Name</h2>
-                <p className={classes.p}>last message ...</p>
+                <h2>{name}</h2>
+                <p className={classes.p}>Last message ...</p>
             </div>
 
             
