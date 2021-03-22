@@ -1,0 +1,15 @@
+import palette from './palette';
+import typography from './typography';
+import overrides from './overrides';
+import props from './props';
+
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
+    palette,
+    typography,
+    overrides,
+    shape: {
+        borderRadius: 0
+    },
+    props
+};

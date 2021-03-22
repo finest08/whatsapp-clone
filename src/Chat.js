@@ -17,18 +17,19 @@ const useStyles = makeStyles({
         padding: '15px',
         display: 'flex',
         alignItems: 'center',
-        borderBottom: '1px solid lightgray'
+        borderBottom: '1px solid lightgray',
     },
     chat__headerInfo: {
         padding: '5px',
         flex: 1,
         paddingLeft: '20px',
+    },    
     chat__h3: {
         marginBottom: '3px',
         fontWeight: 500,
     },
     chat__p: {
-        color: 'lightgray',
+        color: 'gray',
         
     },
     chat__headRight: {
@@ -89,6 +90,7 @@ const useStyles = makeStyles({
         height: '62px',
         borderTop: '1px solid lightgray',
     },
+    
     chat__Icon: {
         display: 'flex',     
     },
