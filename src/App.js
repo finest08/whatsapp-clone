@@ -42,7 +42,7 @@ function App() {
           <Switch>
           <div className={classes.app}>
             <div className={classes.app__body}>
-            <Route path="/rooms/:roomId">
+            <Route exact path="/rooms/:roomId">
               <Sidebar />
                 <Chat />
               </Route>
